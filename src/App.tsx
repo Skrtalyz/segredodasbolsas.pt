@@ -28,7 +28,7 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 
 // LINK DO HOTMART - SUBSTUTUÍVEL FACILMENTE PELO UTILIZADOR
-const HOTMART_LINK = "https://pay.hotmart.com/SUBSTITUIR_PELO_LINK_DO_HOTMART";
+const HOTMART_LINK = "https://pay.hotmart.com/C106096630V?checkoutMode=10";
 
 export default function App() {
   // 1. Contador Regressivo Urgência (falso)
