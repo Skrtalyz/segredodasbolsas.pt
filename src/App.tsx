@@ -511,7 +511,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
             >
-              Começar hoje por apenas €17
+              Começar hoje por apenas €4,97
               <ArrowRight className="h-5 w-5" />
             </motion.a>
           </div>
@@ -1386,7 +1386,7 @@ export default function App() {
           
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4A574] inline-block mb-3">O TEU INVESTIMENTO</span>
           <h2 className="font-serif text-3xl font-black leading-tight tracking-tight sm:text-4xl max-w-xl mx-auto mb-4 text-white">
-            Tudo o que recebes — por apenas €17
+            Tudo o que recebes — por apenas €4,97
           </h2>
           <div className="max-w-xl mx-auto text-left bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6 mb-8 mt-8 shadow-2xl relative overflow-hidden">
             <div className="space-y-4">
@@ -1395,7 +1395,7 @@ export default function App() {
                   <Check className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span>O Segredo das Bolsas: método digital completo</span>
                 </div>
-                <span className="text-zinc-400 font-mono">€49</span>
+                <span className="text-zinc-400 font-mono">€19</span>
               </div>
               <div className="flex justify-between items-center gap-4 text-xs sm:text-sm font-medium border-b border-zinc-800/40 pb-2.5">
                 <div className="flex items-center gap-2">
@@ -1452,10 +1452,10 @@ export default function App() {
 
             <div className="text-center mb-6">
               <p className="text-zinc-500 text-xs sm:text-sm font-bold tracking-wide uppercase mb-1">
-                Valor total: <span className="line-through">€106</span>
+                Valor total: <del style={{ color: "#999999" }}>€76</del>
               </p>
               <p className="font-serif text-4xl sm:text-5xl font-black text-[#D4A574] leading-tight mb-2">
-                Hoje por apenas <span className="text-[#16A34A]">€17</span>
+                Hoje por apenas <span className="text-[#16A34A]">€4,97</span>
               </p>
               <p className="text-zinc-400 text-xs sm:text-sm font-semibold tracking-wide">
                 Pagamento único. Sem mensalidades. Acesso imediato e vitalício.
