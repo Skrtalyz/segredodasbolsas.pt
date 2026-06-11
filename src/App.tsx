@@ -124,18 +124,30 @@ export default function App() {
 
               {/* CTAs */}
               <div className="flex flex-col gap-3 sm:max-w-md">
-                <motion.a 
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  href={HOTMART_LINK} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="group flex w-full items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 py-4.5 text-center text-base font-bold tracking-wide text-white transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:shadow-[#16A34A]/25"
+                <button 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById('dor');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  style={{
+                    background: "transparent",
+                    border: "2px solid #8B4513",
+                    color: "#8B4513",
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    padding: "18px 36px",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    fontFamily: "inherit"
+                  }}
                   id="hero-cta-button"
                 >
-                  Quero o método, acesso imediato
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                </motion.a>
+                  Descobrir o método ↓
+                </button>
+                <p style={{ fontSize: "13px", color: "#666666", textAlign: "center", marginTop: "12px" }}>
+                  Mais de 800 mulheres já acederam · Garantia de 7 dias
+                </p>
               </div>
             </motion.div>
 
@@ -164,7 +176,7 @@ export default function App() {
       </section>
 
       {/* 3. BLOCO DE DOR */}
-      <section className="bg-[#F8F5F0]/60 px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="dor-section">
+      <section className="bg-[#F8F5F0]/60 px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="dor">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,13 +254,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#produto"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('produto');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero a minha autonomia financeira
-              <ArrowRight className="h-5 w-5" />
+              Ver como funciona ↓
             </motion.a>
           </div>
 
@@ -256,7 +270,7 @@ export default function App() {
       </section>
 
       {/* 5. O PRODUTO */}
-      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="produto-section">
+      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="produto">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -378,13 +392,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#viabilidade"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('viabilidade');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero o método, acesso imediato
-              <ArrowRight className="h-5 w-5" />
+              Ver o conteúdo completo ↓
             </motion.a>
           </div>
 
@@ -392,7 +408,7 @@ export default function App() {
       </section>
 
       {/* 8. PORQUE FUNCIONA */}
-      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="porque-funciona-section">
+      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="viabilidade">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -506,13 +522,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#conteudo"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('conteudo');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Começar hoje por apenas €7,90
-              <ArrowRight className="h-5 w-5" />
+              Continuar a ler ↓
             </motion.a>
           </div>
 
@@ -520,7 +538,7 @@ export default function App() {
       </section>
 
       {/* 9. CONTEÚDO DO LIVRO */}
-      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="conteudo-detalhado">
+      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="conteudo">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -605,13 +623,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#bonus"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('bonus');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero aceder a tudo isto
-              <ArrowRight className="h-5 w-5" />
+              Ver o que está incluído ↓
             </motion.a>
           </div>
 
@@ -619,7 +639,7 @@ export default function App() {
       </section>
 
       {/* EXTRA BONUS SECTION */}
-      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/25" id="bonus-section">
+      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/25" id="bonus">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -722,13 +742,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#passos"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('passos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero o método e todos os bónus
-              <ArrowRight className="h-5 w-5" />
+              Ver os bónus em detalhe ↓
             </motion.a>
           </div>
 
@@ -736,7 +758,7 @@ export default function App() {
       </section>
 
       {/* 10. 3 PASSOS PARA LUCRAR */}
-      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="passos-section">
+      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24 border-y border-[#D4A574]/20" id="passos">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -812,13 +834,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#comparacao"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('comparacao');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Dar o primeiro passo agora
-              <ArrowRight className="h-5 w-5" />
+              Continuar ↓
             </motion.a>
           </div>
 
@@ -826,7 +850,7 @@ export default function App() {
       </section>
 
       {/* 7. DIFERENCIAÇÃO */}
-      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="diferenca-section">
+      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="comparacao">
         <div className="mx-auto max-w-[960px]">
           
           <div className="text-center mb-12">
@@ -912,22 +936,26 @@ export default function App() {
           </div>
 
           <div className="mt-8 text-center">
-            <a 
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-[#16A34A] px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+            <motion.a 
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="#qualificacao"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('qualificacao');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero o método original
-              <ArrowRight className="h-5 w-5" />
-            </a>
+              Continuar ↓
+            </motion.a>
           </div>
 
         </div>
       </section>
 
       {/* 11. QUALIFICAÇÃO */}
-      <section className="bg-[#F8F5F0]/40 px-6 py-16 sm:px-8 sm:py-24 border-b border-[#D4A574]/20" id="qualificacao-section">
+      <section className="bg-[#F8F5F0]/40 px-6 py-16 sm:px-8 sm:py-24 border-b border-[#D4A574]/20" id="qualificacao">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1016,21 +1044,28 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#autora"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('autora');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Sim, este método é para mim
-              <ArrowRight className="h-5 w-5" />
+              Ver os resultados reais ↓
             </motion.a>
           </div>
 
         </motion.div>
       </section>
 
+      {/* MICRO-ÂNCORA ENTRE QUALIFICAÇÃO E HISTÓRIA DA AUTORA */}
+      <div style={{ textAlign: "center", padding: "32px 24px", color: "#8B4513", fontFamily: "Georgia, serif", fontSize: "15px", fontStyle: "italic", background: "#F8F5F0" }}>
+        "Ainda tens dúvidas? Conhece a pessoa que criou este método."
+      </div>
+
       {/* 4. BLOCO DA AUTORA */}
-      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="autora-section">
+      <section className="bg-white px-6 py-16 sm:px-8 sm:py-24" id="autora">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1087,13 +1122,15 @@ export default function App() {
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={HOTMART_LINK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              href="#depoimentos"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('depoimentos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border-2 border-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-[#8B4513] bg-transparent shadow-sm transition-all duration-300 hover:bg-[#8B4513]/5 hover:shadow-md"
             >
-              Quero o método da Maria João
-              <ArrowRight className="h-5 w-5" />
+              Ver resultados de mulheres reais ↓
             </motion.a>
           </div>
 
@@ -1101,7 +1138,7 @@ export default function App() {
       </section>
 
       {/* 6. DEPOIMENTOS */}
-      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24" id="depoimentos-section">
+      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24" id="depoimentos">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1202,9 +1239,9 @@ export default function App() {
               href={HOTMART_LINK}
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#70370f] hover:shadow-xl hover:translate-y-[-1px]"
             >
-              Quero resultados como estes
+              Quero resultados como estes — €7,90
               <ArrowRight className="h-5 w-5" />
             </motion.a>
           </div>
@@ -1213,7 +1250,7 @@ export default function App() {
       </section>
 
       {/* SEÇÃO DE PROVA SOCIAL VISUAL */}
-      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24" id="bolsas-feitas-portfolio">
+      <section className="bg-[#F8F5F0] px-6 py-16 sm:px-8 sm:py-24" id="provas">
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1365,9 +1402,9 @@ export default function App() {
               href={HOTMART_LINK}
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#16A34A] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#15803D] hover:shadow-xl hover:translate-y-[-1px]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-[#8B4513] px-8 sm:px-10 py-4 text-center text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-[#70370f] hover:shadow-xl hover:translate-y-[-1px]"
             >
-              Quero fazer bolsas como estas
+              Quero fazer bolsas como estas — €7,90
               <ArrowRight className="h-5 w-5" />
             </motion.a>
           </div>
@@ -1375,7 +1412,7 @@ export default function App() {
       </section>
 
       {/* 12. CTA FINAL */}
-      <section className="bg-zinc-950 px-6 py-16 text-white sm:px-8 sm:py-24 border-t-2 border-[#8B4513]" id="oferta-cta-final">
+      <section className="bg-zinc-950 px-6 py-16 text-white sm:px-8 sm:py-24 border-t-2 border-[#8B4513]" id="cta-final">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1469,10 +1506,10 @@ export default function App() {
                 href={HOTMART_LINK} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#16A34A] px-6 py-4 text-center text-base font-black uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#15803D] hover:shadow-[0_0_20px_rgba(22,163,74,0.3)] focus:outline-none"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#8B4513] px-6 py-4 text-center text-base font-black uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#70370f] hover:shadow-[0_0_20px_rgba(139,69,19,0.35)] focus:outline-none"
                 id="final-cta-button"
               >
-                Quero tudo isto, acesso imediato
+                Quero tudo isto por €7,90 — acesso imediato
               </motion.a>
             </div>
 
